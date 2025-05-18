@@ -1,3 +1,5 @@
+// two parameter functions
+
 const add = (a, b) => {
   return a + b;
 };
@@ -14,10 +16,35 @@ const divide = (a, b) => {
   return a / b;
 };
 
-const pi = 3.14;
-const e = 2.71;
+// one parameter functions => to do!
 
-console.log(add(e, pi));
-console.log(subtract(pi, e));
-console.log(multiply(pi, e));
-console.log(divide(pi, e));
+const inverse = (a) => {
+  return 1 / a;
+};
+
+const square = (a) => {
+  return a ** 2;
+};
+
+const root = (a) => {
+  return sqrt(a);
+};
+
+const operate = (a, b, operation) => {
+  if (operation == "add") {
+    return add(a, b);
+  } else if (operation == "subtract") {
+    return subtract(a, b);
+  } else if (operation == "multiply") {
+    return multiply(a, b);
+  } else if (operation == "divide") {
+    if (b == 0) {
+      return "ERROR";
+    }
+    return divide(a, b);
+  }
+};
+
+let first;
+let second;
+let operator;
