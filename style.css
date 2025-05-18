@@ -15,7 +15,6 @@ body {
   display: flex;
   justify-content: space-between;
   height: 35px;
-  margin-bottom: 5px;
 }
 
 .title-text {
@@ -109,6 +108,15 @@ body {
 
 /* Memory */
 
+.memory-text {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+  color: grey;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
 /* Display */
 .display-text {
   font-size: 32px;
@@ -116,6 +124,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-right: 8px;
+  height: 72px;
 }
 
 /* Buttons */
