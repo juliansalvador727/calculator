@@ -8,55 +8,75 @@
   </head>
   <body>
     <div id="container">
-      <div id="app-title-bar">
-        <div class="align-left">
-          <div><img src="calc.PNG" alt="icon" class="calc-icon" /></div>
-          <div><p class="title-text">Calculator</p></div>
+      <div id="top">
+        <div id="app-title-bar">
+          <div class="align-left">
+            <div><img src="calc.PNG" alt="icon" class="calc-icon" /></div>
+            <div><p class="title-text">Calculator</p></div>
+          </div>
+          <div class="align-right">
+            <button class="square-btn min-max-app">━</button>
+            <button class="square-btn min-max-app">⛶</button>
+            <button class="square-btn close-app">X</button>
+          </div>
         </div>
-        <div class="align-right">
-          <button class="square-btn min-max-app">━</button>
-          <button class="square-btn min-max-app">⛶</button>
-          <button class="square-btn close-app">X</button>
-        </div>
-      </div>
-      <div id="nav-bar">asd</div>
-      <div id="display">asd</div>
-      <div id="memory-button-bar">
-        <button class="mem-btn">MC</button>
-        <button class="mem-btn">MR</button>
-        <button class="mem-btn">M+</button>
-        <button class="mem-btn">M-</button>
-        <button class="mem-btn">MS</button>
-        <button class="mem-btn">MC↓</button>
-      </div>
-      <div id="interface">
-        <!-- first two levels -->
-        <button class="int-btn op-btn" value="%">%</button>
-        <button class="int-btn op-btn" value="CE">CE</button>
-        <button class="int-btn op-btn" value="C">C</button>
-        <button class="int-btn op-btn" value="DEL">⌫</button>
-        <button class="int-btn op-btn" value="INVERSE">x⁻¹</button>
-        <button class="int-btn op-btn" value="SQUARE">x²</button>
-        <button class="int-btn op-btn" value="SQRT">√x</button>
-        <button class="int-btn op-btn" value="/">/</button>
+        <div id="navbar">
+          <div class="align-left-nav">
+            <div class="hover-grey">
+              <input type="image" src="grip.png" alt="" class="nav-image" />
+            </div>
+            <div class="nav-text"><strong>Standard</strong></div>
+            <div class="hover-grey">
+              <input type="image" src="move.png" alt="" class="nav-image" />
+            </div>
+          </div>
 
-        <!-- other section -->
-        <button class="int-btn num-btn" value="7">7</button>
-        <button class="int-btn num-btn" value="8">8</button>
-        <button class="int-btn num-btn" value="9">9</button>
-        <button class="int-btn op-btn" value="MULT">X</button>
-        <button class="int-btn num-btn" value="4">4</button>
-        <button class="int-btn num-btn" value="5">5</button>
-        <button class="int-btn num-btn" value="6">6</button>
-        <button class="int-btn op-btn" value="SUB">-</button>
-        <button class="int-btn num-btn" value="1">1</button>
-        <button class="int-btn num-btn" value="2">2</button>
-        <button class="int-btn num-btn" value="3">3</button>
-        <button class="int-btn op-btn" value="ADD">+</button>
-        <button class="int-btn num-btn" value="NEGATIVE">+/-</button>
-        <button class="int-btn num-btn" value="0">0</button>
-        <button class="int-btn num-btn" value="DECIMAL">.</button>
-        <button class="int-btn eval-btn" value="EVALUATE">=</button>
+          <div class="align-right-nav hover-grey">
+            <input type="image" src="history.png" alt="" class="nav-image" />
+          </div>
+        </div>
+        <div id="memory" class="memory-text">123</div>
+      </div>
+
+      <div id="display" class="display-text">1234567890</div>
+      <div class="bottom">
+        <div id="memory-button-bar">
+          <button class="mem-btn">MC</button>
+          <button class="mem-btn">MR</button>
+          <button class="mem-btn">M+</button>
+          <button class="mem-btn">M-</button>
+          <button class="mem-btn">MS</button>
+          <button class="mem-btn">MC↓</button>
+        </div>
+        <div id="interface">
+          <!-- first two levels -->
+          <button class="int-btn op-btn" value="%">%</button>
+          <button class="int-btn op-btn" value="CE">CE</button>
+          <button class="int-btn op-btn" value="C">C</button>
+          <button class="int-btn op-btn" value="DEL">⌫</button>
+          <button class="int-btn op-btn" value="INVERSE">x⁻¹</button>
+          <button class="int-btn op-btn" value="SQUARE">x²</button>
+          <button class="int-btn op-btn" value="SQRT">√x</button>
+          <button class="int-btn op-btn" value="/">/</button>
+
+          <!-- other section -->
+          <button class="int-btn num-btn" value="7">7</button>
+          <button class="int-btn num-btn" value="8">8</button>
+          <button class="int-btn num-btn" value="9">9</button>
+          <button class="int-btn op-btn" value="MULT">X</button>
+          <button class="int-btn num-btn" value="4">4</button>
+          <button class="int-btn num-btn" value="5">5</button>
+          <button class="int-btn num-btn" value="6">6</button>
+          <button class="int-btn op-btn" value="SUB">-</button>
+          <button class="int-btn num-btn" value="1">1</button>
+          <button class="int-btn num-btn" value="2">2</button>
+          <button class="int-btn num-btn" value="3">3</button>
+          <button class="int-btn op-btn" value="ADD">+</button>
+          <button class="int-btn num-btn" value="NEGATIVE">+/-</button>
+          <button class="int-btn num-btn" value="0">0</button>
+          <button class="int-btn num-btn" value="DECIMAL">.</button>
+          <button class="int-btn eval-btn" value="EVALUATE">=</button>
+        </div>
       </div>
     </div>
     <footer>
