@@ -1,0 +1,119 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Title Bar */
+
+#app-title-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.title-text {
+  font-size: 12px;
+}
+
+.calc-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.align-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square-btn {
+  height: 35px;
+  width: 45px;
+  background-color: #f3f3f3;
+  border: none;
+}
+
+.close-app:hover {
+  background-color: rgb(223, 11, 53);
+  color: white;
+}
+
+.min-max-app:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+/* Calculator  */
+#container {
+  margin-top: 50px;
+  border: 0.5px solid black;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#memory-button-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mem-btn {
+  width: 80px;
+  height: 30px;
+  background-color: #f3f3f3;
+  border: rgb(243, 243, 243) solid 1px;
+}
+
+.mem-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+#interface {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.int-btn {
+  width: 100px;
+  height: 50px;
+  border: rgb(241, 241, 241) solid 2px;
+  border-radius: 5px;
+}
+
+.int-btn:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.op-btn {
+  background-color: rgb(249, 249, 249);
+}
+
+.num-btn {
+  background-color: white;
+}
+
+.eval-btn {
+  background-color: rgb(0, 103, 192);
+  color: white;
+}
+.eval-btn:hover {
+  background-color: rgb(43, 121, 189);
+}
