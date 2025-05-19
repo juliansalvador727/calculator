@@ -48,3 +48,43 @@ const operate = (a, b, operation) => {
 let first;
 let second;
 let operator;
+
+let display = document.getElementById("display");
+const clear = document.getElementById("clear");
+const clearEntry = document.getElementById("clear-entry");
+
+let currentDisplay;
+
+function init() {
+  currentDisplay = "0";
+  display.innerHTML = currentDisplay;
+}
+
+clear.addEventListener("click", () => {
+  clearCalculator();
+});
+clearEntry.addEventListener("click", () => {
+  clearCalculator();
+});
+
+// values = nums, two parameter functions, one parameter functions, other
+// other = submit, decimal, negative
+
+function getNumber(n) {
+  let btnValue = n.innerText;
+  displayNumber(btnValue);
+}
+
+let tracker;
+
+function displayNumber(n) {
+  if (display.innerHTML == 0) {
+    display.innerHTML = n;
+  } else {
+    display.innerHTML += n;
+  }
+}
+
+function clearCalculator() {}
+
+init();
