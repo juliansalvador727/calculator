@@ -113,8 +113,9 @@ body {
   justify-content: flex-end;
   margin-right: 8px;
   color: grey;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 12px;
+  height: 20px;
 }
 
 /* Display */
@@ -124,7 +125,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-right: 8px;
-  height: 72px;
+  height: 60px;
 }
 
 /* Buttons */

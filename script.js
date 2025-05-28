@@ -1,4 +1,4 @@
-let display = document.getElementById("display").value;
+let display = document.getElementById("display").innerHTML;
 
 let currentInput = "0";
 let currentOperation = "";
@@ -18,6 +18,7 @@ function appendNumber(number) {
 }
 
 function appendOperation(operation) {
+  document.getElementById("memory").innerHTML = currentInput;
   if (currentInput === "") {
     return;
   }
@@ -27,14 +28,15 @@ function appendOperation(operation) {
   currentOperation = operation;
   previousInput = currentInput;
   currentInput = "";
-  document.getElementById("display").innerHTML =
-    previousInput + currentOperation;
+  document.getElementById("memory").innerHTML =
+    previousInput + " " + currentOperation;
 }
 
 function calculate() {
   if (previousInput === "" || currentInput === "") {
     return;
   }
+  // let saved = document.getElementById("memory").innerHTML;
   let result;
   let prev = parseFloat(previousInput);
   let current = parseFloat(currentInput);
@@ -58,16 +60,19 @@ function calculate() {
     default:
       return;
   }
-
+  document.getElementById("memory").innerHTML =
+    previousInput + " " + currentOperation + " " + currentInput + " =";
   currentInput = result.toString();
   currentOperation = "";
   previousInput = "";
+
   document.getElementById("display").innerHTML = currentInput;
 }
 
 function clearDisplay() {
-  currentInput = "";
+  currentInput = "0";
   previousInput = "";
   currentOperation = "";
+  document.getElementById("memory").innerHTML = "";
   document.getElementById("display").innerHTML = "";
 }
