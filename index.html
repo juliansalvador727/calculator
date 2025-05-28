@@ -63,31 +63,69 @@
         <div id="interface">
           <!-- first two levels -->
           <button class="int-btn op-btn" value="%">%</button>
-          <button id="clear-entry" class="int-btn op-btn">CE</button>
-          <button id="clear" class="int-btn op-btn">C</button>
+          <button
+            id="clear-entry"
+            onclick="clearDisplay()"
+            class="int-btn op-btn"
+          >
+            CE
+          </button>
+          <button id="clear" onclick="clearDisplay()" class="int-btn op-btn">
+            C
+          </button>
           <button class="int-btn op-btn" value="DEL">⌫</button>
           <button class="int-btn op-btn" value="INVERSE">x⁻¹</button>
           <button class="int-btn op-btn" value="SQUARE">x²</button>
           <button class="int-btn op-btn" value="SQRT">√x</button>
-          <button class="int-btn op-btn" value="/">/</button>
+          <button
+            class="int-btn op-btn"
+            onclick="appendOperation('/')"
+            value="/"
+          >
+            /
+          </button>
 
           <!-- other section -->
-          <button class="int-btn num-btn" onclick="getNumber(this)">7</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">8</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">9</button>
-          <button class="int-btn op-btn" value="MULT">X</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">4</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">5</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">6</button>
-          <button class="int-btn op-btn" value="SUB">-</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">1</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">2</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">3</button>
-          <button class="int-btn op-btn" value="ADD">+</button>
+          <button class="int-btn num-btn" onclick="appendNumber('7')">7</button>
+          <button class="int-btn num-btn" onclick="appendNumber('8')">8</button>
+          <button class="int-btn num-btn" onclick="appendNumber('9')">9</button>
+          <button
+            class="int-btn op-btn"
+            onclick="appendOperation('*')"
+            value="MULT"
+          >
+            X
+          </button>
+          <button class="int-btn num-btn" onclick="appendNumber('4')">4</button>
+          <button class="int-btn num-btn" onclick="appendNumber('5')">5</button>
+          <button class="int-btn num-btn" onclick="appendNumber('6')">6</button>
+          <button
+            class="int-btn op-btn"
+            onclick="appendOperation('-')"
+            value="SUB"
+          >
+            -
+          </button>
+          <button class="int-btn num-btn" onclick="appendNumber('1')">1</button>
+          <button class="int-btn num-btn" onclick="appendNumber('2')">2</button>
+          <button class="int-btn num-btn" onclick="appendNumber('3')">3</button>
+          <button
+            class="int-btn op-btn"
+            onclick="appendOperation('+')"
+            value="ADD"
+          >
+            +
+          </button>
           <button class="int-btn num-btn" value="NEGATIVE">+/-</button>
-          <button class="int-btn num-btn" onclick="getNumber(this)">0</button>
+          <button class="int-btn num-btn" onclick="appendNumber('0')">0</button>
           <button class="int-btn num-btn" value="DECIMAL">.</button>
-          <button class="int-btn eval-btn" value="EVALUATE">=</button>
+          <button
+            class="int-btn eval-btn"
+            onclick="calculate()"
+            value="EVALUATE"
+          >
+            =
+          </button>
         </div>
       </div>
     </div>

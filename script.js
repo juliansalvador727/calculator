@@ -1,90 +1,73 @@
-// two parameter functions
+let display = document.getElementById("display").value;
 
-const add = (a, b) => {
-  return a + b;
-};
+let currentInput = "0";
+let currentOperation = "";
+let previousInput = "";
 
-const subtract = (a, b) => {
-  return a - b;
-};
+document.getElementById("display").innerHTML = currentInput;
 
-const multiply = (a, b) => {
-  return a * b;
-};
-
-const divide = (a, b) => {
-  return a / b;
-};
-
-// one parameter functions => to do!
-
-const inverse = (a) => {
-  return 1 / a;
-};
-
-const square = (a) => {
-  return a ** 2;
-};
-
-const root = (a) => {
-  return sqrt(a);
-};
-
-const operate = (a, b, operation) => {
-  if (operation == "add") {
-    return add(a, b);
-  } else if (operation == "subtract") {
-    return subtract(a, b);
-  } else if (operation == "multiply") {
-    return multiply(a, b);
-  } else if (operation == "divide") {
-    if (b == 0) {
-      return "ERROR";
-    }
-    return divide(a, b);
-  }
-};
-
-let first;
-let second;
-let operator;
-
-let display = document.getElementById("display");
-const clear = document.getElementById("clear");
-const clearEntry = document.getElementById("clear-entry");
-
-let currentDisplay;
-
-function init() {
-  currentDisplay = "0";
-  display.innerHTML = currentDisplay;
-}
-
-clear.addEventListener("click", () => {
-  clearCalculator();
-});
-clearEntry.addEventListener("click", () => {
-  clearCalculator();
-});
-
-// values = nums, two parameter functions, one parameter functions, other
-// other = submit, decimal, negative
-
-function getNumber(n) {
-  let btnValue = n.innerText;
-  displayNumber(btnValue);
-}
-
-let tracker;
-
-function displayNumber(n) {
-  if (display.innerHTML == 0) {
-    display.innerHTML = n;
+function appendNumber(number) {
+  if (currentInput !== "0") {
+    currentInput += number;
   } else {
-    display.innerHTML += n;
+    currentInput = number;
   }
+  currentInputDisplay = parseInt(currentInput);
+  document.getElementById("display").innerHTML = currentInput;
+  console.log(currentInput);
 }
 
-function clearCalculator() {}
+function appendOperation(operation) {
+  if (currentInput === "") {
+    return;
+  }
+  if (currentInput !== "") {
+    calculate();
+  }
+  currentOperation = operation;
+  previousInput = currentInput;
+  currentInput = "";
+  document.getElementById("display").innerHTML =
+    previousInput + currentOperation;
+}
 
-init();
+function calculate() {
+  if (previousInput === "" || currentInput === "") {
+    return;
+  }
+  let result;
+  let prev = parseFloat(previousInput);
+  let current = parseFloat(currentInput);
+  switch (currentOperation) {
+    case "+":
+      result = prev + current;
+      break;
+    case "-":
+      result = prev - current;
+      break;
+    case "*":
+      result = prev * current;
+      break;
+    case "/":
+      if (current === 0) {
+        alert("Cannot divide by zero");
+        return;
+      }
+      result = prev / current;
+      break;
+    default:
+      return;
+  }
+
+  currentInput = result.toString();
+  currentOperation = "";
+  previousInput = "";
+  document.getElementById("display").innerHTML = currentInput;
+}
+
+function clearDisplay() {
+  currentInput = "";
+  previousInput = "";
+  currentOperation = "";
+  document.getElementById("display").innerHTML = "";
+}
